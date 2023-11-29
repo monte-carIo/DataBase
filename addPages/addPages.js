@@ -25,25 +25,24 @@ function placeOrder() {
     var numPages = parseFloat(document.getElementById('numPages').value);
     var totalCost = document.getElementById('totalCost').value;
     var dateToBuy = document.getElementById('dateToBuy').value;
-    console.log(typeof(dateToBuy));
     
-    // // Check if the number of pages is a valid positive number
-    // if (isNaN(numPages) || numPages < 0) {
-    //     alert('Please enter a valid number of pages.');
-    //     location.reload();
-    //     return;
-    // }
+    // Check if the number of pages is a valid positive number
+    if (isNaN(numPages) || numPages < 0) {
+        alert('Please enter a valid number of pages.');
+        location.reload();
+        return;
+    }
 
-    // // Check if the date is filled
-    // else if (dateToBuy != "") {
-    //     alert('Please enter the date to buy.');
-    //     location.reload();
-    //     return;
-    // }
+    // Check if the date is filled
+    else if (dateToBuy == "") {
+        alert('Please enter the date to buy.');
+        location.reload();
+        return;
+    }
 
-    // else {
-    //     alert('Buy pages successfull!');
-    //     location.reload();
-    //     return;
-    // }
+    else {
+        alert('Buy pages successfull!');
+        location.reload();
+        return;
+    }
 }
